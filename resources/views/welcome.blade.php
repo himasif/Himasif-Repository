@@ -1,99 +1,138 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.base')
 
-        <title>Laravel</title>
+@section('title')
+Himasif Repository
+@endsection
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+@section('contents')
+<section class="banner-area relative">
+	<div class="overlay overlay-bg"></div>
+	<div class="container">
+		<div class="row fullscreen justify-content-center align-items-center">
+			<div class="col-lg-8">
+				<div class="banner-content text-center">
+					<p class="text-uppercase text-white">Temukan refrensi untuk projectmu di</p>
+					<h1 class="text-uppercase text-white">Himasif Repository</h1>
+					<a href="#" class="primary-btn banner-btn">Go to Repository</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Banner Area -->
+<!-- Start About Area -->
+<section class="section-full gray-bg">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-10">
+				<div class="section-title text-center">
+					<p class="text-uppercase">Apa itu Himasif Repository</p>
+					<h3><b>Himasif Repository</b> adalah tempat kumpulan project yang telah dikerjakan oleh mahasiswa <b>Sistem Informasi Universitas Jember</b> yang dapat digunakan sebagai refrensi</h3>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<figure class="signle-service">
+					<img src="img/s1.jpg" class="img-fluid" alt="">
+					<figcaption class="text-center">
+						<h5 class="text-uppercase">Project Review</h5>
+						<p>Penjelasan project dari Himasif Repository secara singkat</p>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-md-4">
+				<figure class="signle-service">
+					<img src="img/s2.jpg" class="img-fluid" alt="">
+					<figcaption class="text-center">
+						<h5 class="text-uppercase">Source Code</h5>
+						<p>Anda dapat melihat Source Code dari Himasif Repository yang ada</p>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-md-4">
+				<figure class="signle-service">
+					<img src="img/s3.jpg" class="img-fluid" alt="">
+					<figcaption class="text-center">
+						<h5 class="text-uppercase">Download</h5>
+						<p>Anda dapat mengunduh project dari Himasif Repository secara gratis</p>
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End About Area -->
+<!-- Start Product Area -->
+<section id="services" class="title-bg section-full">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-8">
+				<div class="product-area-title text-center">
+					<p class="text-white text-uppercase">Himasif Repository</p>
+					<h2 class="text-white h1">Project apa saja yang terdapat pada Himasif Repository?</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-3 col-sm-6">
+				<div class="single-product">
+					<div class="icon">
+						<span class="lnr lnr-code"></span>
+					</div>
+					<div class="desc">
+						<h4>Pemrograman</h4>
+						<p>Semester 1 - 4</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-6">
+				<div class="single-product">
+					<div class="icon">
+						<span class="lnr lnr-sun"></span>
+					</div>
+					<div class="desc">
+						<h4>Desain Perangkat Lunak</h4>
+						<p>Semester 3 - 5</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-6">
+				<div class="single-product">
+					<div class="icon">
+						<span class="lnr lnr-screen"></span>
+					</div>
+					<div class="desc">
+						<h4>Aplikasi Perangkat Lunak</h4>
+						<p>Semester 5 - 6 </p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-6">
+				<div class="single-product">
+					<div class="icon">
+						<span class="lnr lnr-magic-wand"></span>
+					</div>
+					<div class="desc">
+						<h4>Desain Grafis</h4>
+						<p>Semester 5</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Product Area -->
+<!-- Start Cta Area -->
+<section class="cta-area">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-8 d-flex no-flex-xs justify-content-between align-items-center">
+				<h5 class="text-uppercase text-white">Jika anda mempunyai arsip project yang telah dikerjakan silahkan submit project anda sebagai arsip</h5>
+				<a href="#" class="primary-btn d-inline-flex text-uppercase text-white align-items-center">Submit<span class="lnr lnr-arrow-right"></span></a>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Cta Area -->
+@endsection
